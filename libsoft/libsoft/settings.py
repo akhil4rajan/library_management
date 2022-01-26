@@ -19,11 +19,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'l2l_a1ipei1u820))9kn8db*q1ug8732x=w+y0%_9t1myz_x#z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -76,7 +74,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'libsoft.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -138,13 +135,4 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
 }
 
-
-# Notification Mail Config
-FROM_EMAIL = 'peter.ibsplc@gmail.com'
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = FROM_EMAIL
-EMAIL_HOST_PASSWORD = 'wixdgqvownxzwozl'
+from .local_settings import *

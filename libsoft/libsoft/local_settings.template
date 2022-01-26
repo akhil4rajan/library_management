@@ -1,0 +1,18 @@
+import os
+from .settings import BASE_DIR
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': <dbname>,
+        'USER': <username>,
+        'PASSWORD': <password>
+    }
+}
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+ALLOWED_HOSTS = ['.example.com', 'localhost']
+
+DUCKLING_URL = '<duckling url>'
